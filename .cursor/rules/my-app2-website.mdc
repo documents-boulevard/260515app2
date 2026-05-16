@@ -1,0 +1,26 @@
+---
+description: Stack and UI conventions for this Next.js site (my-app2)
+alwaysApply: true
+---
+
+# my-app2 website
+
+## Framework
+
+- Next.js App Router (`app/`), React 19, TypeScript.
+- This repo’s Next.js differs from generic training data. Before changing routing, config, or Next APIs, read the matching topic under `node_modules/next/dist/docs/` and respect deprecations (see `AGENTS.md`).
+
+## Styling and components
+
+- Tailwind CSS v4; use utility classes consistently.
+- Prefer existing primitives: `class-variance-authority`, `clsx`, `tailwind-merge`, Radix/shadcn patterns already in the project when adding UI.
+- Visual language: light backgrounds `bg-zinc-50` / `bg-white`, dark mode `dark:bg-black` with `text-zinc-*` for body and `text-black` / `dark:text-zinc-50` for emphasis. Keep `font-sans` unless a page intentionally changes typography.
+
+## Images and links
+
+- Use `next/image` for static images under `public/`. Set `width`/`height` (or fill + layout) and meaningful `alt`.
+- External links: `target="_blank"` with `rel="noopener noreferrer"`.
+
+## Scope
+
+- Prefer small, focused changes; match patterns in neighboring files when extending the app.
